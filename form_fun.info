@@ -1,0 +1,33 @@
+name = Form Fun
+description = This is just a crazy work in progress to make forms look nicer. Don't use it. It's a subtheme of ninesixty because I'm feeling lazy about layout and well, it just works.
+core = 6.x
+engine = phptemplate
+
+base theme = ninesixty
+
+; Stylesheets
+stylesheets[all][] = styles/styles.css
+stylesheets[all][] = css/forms.css
+stylesheets[all][] = css/styles.css
+
+; Javascript
+scripts[] = js/form-fun.js
+
+; Disable a bunch of stylesheets
+stylesheets[all][] = admin.css
+stylesheets[all][] = aggregator.css
+stylesheets[all][] = book.css
+stylesheets[all][] = content-module.css
+stylesheets[all][] = ctools.css
+stylesheets[all][] = dblog.css
+stylesheets[all][] = defaults.css
+stylesheets[all][] = fieldgroup.css
+stylesheets[all][] = filefield.css
+stylesheets[all][] = forum.css
+stylesheets[all][] = node.css
+stylesheets[all][] = menu-block-admin.css
+stylesheets[all][] = panels.css
+stylesheets[all][] = poll.css
+stylesheets[all][] = system.css
+stylesheets[all][] = system-menus.css
+stylesheets[all][] = user.css

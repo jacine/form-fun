@@ -1,0 +1,243 @@
+@charset "UTF-8";
+
+/* Just some basic styles for the theme thrown together quickly. */
+
+body {
+  background: #fff;
+  font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+a {
+  color: #2479ab;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2479ab;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #2479ab;
+}
+
+a:visited {
+  color: #2479ab;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0.25em 0;
+  padding: 0;
+  color: #000;
+}
+
+#footer {
+  text-align: center;
+}
+
+.submitted {
+  font-style: italic;
+  color: #999;
+}
+
+.links {
+  font-size: 0.9em;
+}
+
+#blocks {
+  width: 100%;
+}
+
+ul {
+  margin: 0 0 0 1em;
+}
+
+.block, .panel-pane {
+  margin: 1em 0;
+}
+
+/* @group tabs
+..............................................................................*/
+.tabs a {
+  display: block;
+  padding: 0.5em 0.75em;
+  text-shadow: #fff 0 0 2px;
+}
+
+.tabs a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.tabs li.active a,
+.tabs li.active a.active:hover {
+  background: #ccc;
+  color: #000;
+}
+
+.tabs li.active a.active:hover {
+  cursor: default;
+}
+
+/* @group primary
+..............................................................................*/
+ul.primary {
+  display: block;
+  background: #ddd;
+  border-bottom: solid 5px #ccc;
+  width: 100%;
+  height: 2em;
+  margin: 0;
+}
+
+ul.primary li {
+  border-right: solid 1px #ccc;
+  float: left;
+  list-style: none;
+  line-height: normal;
+}
+
+ul.primary a {
+  color: #666;
+}
+/* @end */
+
+
+/* @group secondary
+..............................................................................*/
+ul.secondary {
+ list-style: none;
+ padding: 0.5em 1em 0.5em 0;
+ margin: 0;
+}
+
+ul.secondary li {
+  display: inline; 
+}
+
+ul.secondary li a {
+  display: inline;
+  padding: 0.25em 0.75em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+}
+/* @end */
+/* @end */
+
+/* @group tables
+..............................................................................*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.25em;
+  vertical-align: top;
+}
+
+th {
+  background: #f8f8f8;
+  border: solid 1px #eee;
+  text-align: left;
+}
+
+td {
+  border: solid 1px #ddd;
+  background: #fff;
+}
+
+tr.even td {
+  background: #eee;
+}
+
+/* @end */
+
+
+/* @group system messages
+..............................................................................*/
+.messages {
+  background: #dbf2d8;
+  border: 1px solid #c0d8c0;
+  margin: 1em 0;
+  padding: 2em;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+}
+
+.messages .inner {
+  margin-left: 4em;
+}
+
+.messages .icon {
+  background: url('../images/sprites-32.png') no-repeat 0 0;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+}
+
+.warning {
+  background: #fcf8d8;
+  border-color: #e4e1c4;
+}
+
+.warning .icon {
+  background-position: -182px -1270px;
+}
+
+.error {
+  background: #facbc2;
+  border-color: #d0a9a2;
+}
+
+.error .icon {
+  background-position: -364px -898px;
+}
+
+.status .icon {
+  background-position: 0 -960px;
+}
+
+.help {
+  margin: 1em 0;
+  padding: 0;
+}
+
+.help .help {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* @end */
+
+
+/* @group clearfix
+..............................................................................*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+/* End hide from IE-mac */
+/* @end */

@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+/* Crazy attempt to make forms more pretty */
+
+form {
+  margin: 1em 0;
+}
+
+/* @group fieldsets
+..............................................................................*/
+fieldset {
+  margin: 1em 0;
+  border: solid 2px #eee;
+}
+
+.fieldset fieldset {
+  margin-left: 1em;
+}
+
+.fieldset-inner {
+  padding: 1em;
+}
+
+
+/* @group collapsed
+..............................................................................*/
+html.js fieldset.collapsed {
+  border: none;
+}
+
+html.js fieldset.collapsed * {
+  display: none;
+}
+
+html.js fieldset.collapsed legend {
+  display: block;
+  margin-left: 0;
+}
+
+/* Note: IE-only fix due to '* html' (breaks Konqueror otherwise). */
+* html.js fieldset.collapsed legend,
+* html.js fieldset.collapsed legend *,
+* html.js fieldset.collapsed table * {
+  display: inline;
+}
+/* @end */
+
+
+/* @group collapsible
+..............................................................................*/
+/* For Safari 2 to prevent collapsible fieldsets containing tables from dissapearing due to tableheader.js. */
+html.js fieldset.collapsible {
+  position: relative;
+}
+
+/*html.js fieldset.collapsible .fieldset-wrapper {
+  overflow: visible;
+}*/
+/* @end */
+/* @end */
+
+
+/* @group legends
+..............................................................................*/
+legend {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+fieldset legend {
+  margin-left: 1em;
+}
+
+fieldset fieldset legend {
+  font-size: 1.1em;
+}
+
+html.js fieldset.collapsible legend a {
+  display: block;
+}
+
+/* This doesn't work <= IE7, just too lazy to add images. */
+html.js fieldset.collapsible legend a:before {
+  content: "- ";
+}
+
+html.js fieldset.collapsed legend a:before {
+  content: "+ ";
+}
+/* @end */
+
+
+/* @group labels
+..............................................................................*/
+.form-item label {
+  color: #000;
+  float: left;
+  font-weight: bold;
+  font-size: 0.9em;
+  max-width: 22%;
+  padding: 0.5em 1em;
+  word-wrap: break-word;
+  _width: 22%;
+}
+
+.form-item label.option {
+  float: none;
+  font-weight: normal;
+  padding: 0;
+  max-width: 0;
+  _width: auto;
+}
+
+.form-item-no-label label.option {
+  font-weight: bold;
+}
+
+.form-checkboxes .form-item-no-label label.option,
+.form-radios .form-item-no-label label.option {
+  font-weight: normal;
+}
+/* @end */
+
+
+/* @group descriptions
+..............................................................................*/
+.description {
+  margin: 0 0 1em 0;
+  clear: both;
+}
+
+.form-item .description {
+  margin: 0.25em 0;
+  font-size: 0.85em;
+}
+
+.form-item .description p {
+  margin-bottom: 0.15em;
+}
+/* @end */
+
+
+/* @group required marker
+..............................................................................*/
+.form-required {
+  color: crimson;
+  margin: 0 0.25em 0 0;
+  font-size: 1.2em;
+}
+/* @end */
+
+
+/* @group form items
+..............................................................................*/
+.form-item {
+  background: #f8f8f8;
+  border: solid 1px #ddd;
+  border-top: none;
+}
+
+/* jQuery helper class. There is no way to do this in the theme function */
+.form-item-first {
+  border-top: solid 1px #ddd;
+}
+
+
+.form-item-no-label {
+  background: #eee;
+}
+
+.form-item .right {
+  background: #eee;
+  position: relative;
+  top: 0;
+  width: 75%;
+  margin-left: 25%;
+  *width: 74.99%;
+  _width: 74.5%;
+  _overflow: hidden;
+}
+
+.form-item .inner {
+  padding: 0.5em;
+  text-align: left;
+}
+
+.form-item .right .inner {
+  border-left: solid 1px #ddd;
+}
+
+table .form-item,
+table .form-item .inner,
+table .form-item .right .inner,
+table .form-item .right {
+  background: transparent;
+  border: none;
+}
+
+.form-item ul {
+  margin-left: 30px;
+}
+/* @end */
+
+
+/* @group submit buttons
+..............................................................................*/
+form .form-submit {
+  margin-top: 2em;
+}
+
+form fieldset + .form-submit {
+  margin-top: 0.5em;
+}
+/* @end */
+
+
+
+/* @group hoop jumping...
+..............................................................................*/
+.form-item .form-checkboxes .form-item,
+.form-item .form-radios .form-item {
+  border: none;
+  background: none;
+}
+
+.form-item .form-checkboxes .form-item .inner,
+.form-item .form-radios .form-item .inner {
+  border: none;
+  padding: 0;
+}
+
+/* Resizable textareas */
+div.resizable-textarea textarea {
+  width: 98%;
+}
+.resizable-textarea .grippie {
+  height: 9px;
+  overflow: hidden;
+  background: #ddd url('/misc/grippie.png') no-repeat center 2px;
+  border-top-width: 0;
+  cursor: s-resize;
+}
+
+html.js .resizable-textarea textarea {
+  margin-bottom: 0;
+  display: block;
+}
+
+/* Teaser splitter */
+#edit-teaser-js-wrapper,
+.teaser-checkbox .form-item {
+  background: #fff;
+  border: none;
+  text-align: right;
+}
+
+.teaser-button-wrapper {
+  padding: 1em 1em 1em 0;
+  border: none;
+}
+
+.teaser-checkbox .inner {
+  background: #eee;
+  border: solid 1px #ddd;
+}
+
+textarea.teaser {
+  display: none;
+}
+
+html.js .no-js {
+  display: none;
+}
+/* @end */
